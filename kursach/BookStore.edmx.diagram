@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6dc7664a4a545108699c16c397975be" Name="Diagram1">
+        <EntityTypeShape EntityType="Book_storeModel.authors" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.Books" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.InfOrder" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.Orders" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.publishers" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.Users" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Book_storeModel.Users_two" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Book_storeModel.FK_Books_authors" ManuallyRouted="false" />
+        <AssociationConnector Association="Book_storeModel.FK_Books_publishers" ManuallyRouted="false" />
+        <AssociationConnector Association="Book_storeModel.FK_InfOrder_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="Book_storeModel.FK_InfOrder_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="Book_storeModel.FK_Orders_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

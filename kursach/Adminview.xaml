@@ -1,0 +1,15 @@
+﻿<Window x:Class="kursach.Adminview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach"
+        mc:Ignorable="d"
+        Title="Adminview" Height="450" Width="800">
+    <Grid Background="#FFD43030">
+        <Button Content="Книги" Click="BtnBooks_click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="35" Background="#8e3bf5" Margin="327,87,0,0" Cursor="Hand"/>
+        <Button Content="Авторы" Click="BtnAuthors_click" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Height="35" Background="#8e3bf5" Margin="327,156,0,0" Cursor="Hand"/>
+        <Button Content="Издательства" Click="BtnPublishers_click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="35" Background="#8e3bf5" Margin="327,179,0,0" Cursor="Hand"/>
+
+    </Grid>
+</Window>

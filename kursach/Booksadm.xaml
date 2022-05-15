@@ -1,0 +1,39 @@
+﻿<Window x:Class="kursach.Booksadm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach"
+        mc:Ignorable="d"
+        Title="Booksadm" Height="450" Width="800">
+    <Grid Background="#FF6F8189">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="73"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DGridBooks" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF6F8189" Margin="0,0,0,252">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Имя автора" Binding="{Binding authors.Firstname}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Фамилия автора" Binding="{Binding authors.Surname}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Отчество автора" Binding="{Binding authors.Patronymic}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Номер издательства" Binding="{Binding Publisher_id}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Название книги" Binding="{Binding Book_name}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Год выпуска" Binding="{Binding Pubyear}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Жанр" Binding="{Binding Genre}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Цена" Binding="{Binding Price}" ></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Количество книг" Binding="{Binding Amount_book}" ></DataGridTextColumn>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="BtnEdit" Background="#FFD4A0A0" Click="BtnEdit_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click" Margin="108,348,0,190" Width="167" Background="#FFD4A0A0" FontSize="20" FontFamily="Segoe UI Black"/>
+        <Button Content="Удалить" HorizontalAlignment="Right" Name="BtnDelete" Click="BtnDelete_Click" Margin="0,348,315.6,190" Width="167" Background="#FFD4A0A0" FontSize="20" FontFamily="Segoe UI Black"/>
+        <Button Content="Назад" Click="BtnBack_click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="0,373,0,0" Height="47" Background="#FFD4A0A0" FontFamily="Segoe UI Black" FontSize="15"/>
+
+    </Grid>
+</Window>

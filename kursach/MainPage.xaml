@@ -1,0 +1,58 @@
+﻿<Window x:Class="kursach.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach"
+        mc:Ignorable="d"
+        Title="MainPage" Height="600" Width="800" Background="#FF5769EB">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550*"></ColumnDefinition>
+            <ColumnDefinition Width="250*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="115"></RowDefinition>
+            <RowDefinition Height="487*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Mystery" HorizontalAlignment="Left" FontSize="55" Margin="166,10,0,10.2" Width="263" Foreground="#FFA5CCE8" FontFamily="Algerian" />
+        <TextBlock Text="Store" HorizontalAlignment="Right" FontSize="55" Margin="0,10,176.6,10.2" Width="183" Foreground="#FFA5CCE8" FontFamily="Algerian" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnShopping" Margin="0,0,-0.4,2.8" BorderBrush="{x:Null}" Cursor="Hand" Click="btnShopping_Click" Grid.Column="1" RenderTransformOrigin="1.636,0.454" HorizontalAlignment="Right" Width="131">
+            <Button.Background>
+                <ImageBrush ImageSource="C:/Pictures/shop2.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <ListView x:Name="listMain" Grid.Row="1" Margin="0,2.2,-0.4,-0.6" Grid.ColumnSpan="2" Background="#FF3953DD">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250*"></ColumnDefinition>
+                            <ColumnDefinition Width="250*"></ColumnDefinition>
+                            <ColumnDefinition Width="300*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <WrapPanel Orientation="Horizontal" Height="200">
+                            <Image Width="250" Height="200" Grid.Column="1" Stretch="UniformToFill" HorizontalAlignment="Left" Margin="0">
+                                <Image.Source>
+                                    <Binding Path="Img_product">
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" Grid.Column="2">
+                            <TextBlock Text="Название:" Grid.Column="2" Margin="0" FontSize="24" FontFamily="Comic Sans MS"/>
+                            <TextBlock Text="{Binding Book_name}" Grid.Column="2" HorizontalAlignment="Left" FontSize="24" FontFamily="Comic Sans MS"/>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Vertical" Margin="0,35,0,0" Grid.Column="2">
+                            <TextBlock Text="Цена:" Grid.Column="2" Margin="0" FontSize="14" FontFamily="Comic Sans MS"/>
+                            <TextBlock Text="{Binding Price}" HorizontalAlignment="Left" Grid.Column="3" FontSize="14" FontFamily="Comic Sans MS"/>
+                            <TextBlock Text="Жанр:" Grid.Column="2" Margin="0" FontSize="14" FontFamily="Comic Sans MS"/>
+                            <TextBlock Text="{Binding Genre}" HorizontalAlignment="Left" Grid.Column="3" FontSize="14" FontFamily="Comic Sans MS"/>
+                        </WrapPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Image Source="C:/Pictures/Лого3.png" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Height="120" Margin="10,0,415.6,0" Grid.RowSpan="2" />
+    </Grid>
+</Window>
